@@ -11,6 +11,7 @@ pygame.display.set_caption("Space Maker")
 branco = (255, 255, 255)
 preto = (0, 0, 0)
 fundo = pygame.image.load("Assets/bg.jpg")
+fundo = pygame.transform.scale(fundo, (800, 600))
 tela.blit(fundo, (0, 0))
 pygame.display.set_caption("Gerenciador de Marcações")
 
@@ -84,7 +85,7 @@ def main():
             texto = pygame.font.SysFont("Arial", 20).render(nome, True, branco)
             tela.blit(texto, (posicao[0] + 10, posicao[1]))
 
-        fonte = pygame.font.SysFont("Arial", 30)
+        fonte = pygame.font.SysFont("Arial", 15)
         salvarTexto = fonte.render("Pressione F10 para salvar", True, branco)
         carregarTexto = fonte.render("Pressione F11 para carregar", True, branco)
         excluirTexto = fonte.render("Pressione F12 para excluir todas as marcações", True, branco)
