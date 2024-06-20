@@ -13,7 +13,9 @@ preto = (0, 0, 0)
 fundo = pygame.image.load("Assets/bg.jpg")
 fundo = pygame.transform.scale(fundo, (800, 600))
 tela.blit(fundo, (0, 0))
-pygame.display.set_caption("Gerenciador de Marcações")
+pygame.display.set_caption("Space Maker")
+icone = pygame.image.load("Assets/space.png")
+pygame.display.set_icon(icone)
 
 def salvar_marcacoes(marcacoes, arquivo="marcacoes.txt"):
     with open(arquivo, 'w') as f:
